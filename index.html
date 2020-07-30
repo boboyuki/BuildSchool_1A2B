@@ -66,10 +66,12 @@
       let checkBtn = document.querySelector('.input-group-append .btn');
       let history = document.querySelector('.history');
       //答案 
-      const answer = setAnswer();
+      let answer = "";
 
       start.addEventListener('click', function() {
         turnBeginButton(false)
+        // 重新設置
+        answer = setAnswer()
       });
       lookAnswer.addEventListener('click', function() {
         window.alert(`答案是 【${answer}】，請先動腦好嗎再看答案?????`);
